@@ -11,9 +11,7 @@ using UnityEngine;
  *  if you are reading this then you are pretty cool ;)
  *  
  *  this mod adds several additional suits to the game so you can die in style!
- *  includes:
- *      - orange
- *      - orange
+ *  includes: red, yellow, green, blue, purple, pink, and white suits
  *  
  *  feel free to read/reuse any snippets below to learn and create your own mods!
  *   
@@ -31,7 +29,7 @@ namespace AdditionalSuits
         //mod details
         private const string modGUID = "ACS.AdditionalSuits";
         private const string modName = "AdditionalSuits";
-        private const string modVersion = "1.0.0";
+        private const string modVersion = "1.0.1";
 
         //harmony reference
         private readonly Harmony harmony = new Harmony(modGUID);
