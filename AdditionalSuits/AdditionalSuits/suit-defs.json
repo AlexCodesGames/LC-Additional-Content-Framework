@@ -1,0 +1,54 @@
+/*  LETHAL COMPANY MOD - ADDITIONAL SUITS
+
+    this file contains all custom suit definitions used for the additional suits mod
+    to add a new suit, simply add a new entry to this listing & add your texture image to the resources folder
+
+    entry breakdown:
+      - suitID: unique identifier used in-game to identify the item (doesn't do anything atm, but will be needed for shop unlocks)
+      - suitName: name that will be displayed when the player hovers over the suit in game
+      - suitTexture: name of the texture image that will be used to render the suit (include file extension)
+*/
+{
+  "unlockableSuits": [
+    {
+      "suitID": "0_Red_Suit",
+      "suitName": "Red Suit",
+      "suitTexture": "0_Red_Suit.png"
+    },
+    {
+      "suitID": "1_Yellow_Suit",
+      "suitName": "Yellow Suit",
+      "suitTexture": "1_Yellow_Suit.png"
+    },
+    {
+      "suitID": "2_Green_Suit",
+      "suitName": "Green Suit",
+      "suitTexture": "2_Green_Suit.png"
+    },
+    {
+      "suitID": "3_Blue_Suit",
+      "suitName": "Blue Suit",
+      "suitTexture": "3_Blue_Suit.png"
+    },
+    {
+      "suitID": "4_Purple_Suit",
+      "suitName": "Purple Suit",
+      "suitTexture": "4_Purple_Suit.png"
+    },
+    {
+      "suitID": "5_Pink_Suit",
+      "suitName": "Pink Suit",
+      "suitTexture": "5_Pink_Suit.png"
+    },
+    {
+      "suitID": "6_White_Suit",
+      "suitName": "White Suit",
+      "suitTexture": "6_White_Suit.png"
+    },
+    {
+      "suitID": "7_Black_Suit",
+      "suitName": "Black Suit",
+      "suitTexture": "7_Black_Suit.png"
+    }
+  ]
+}
