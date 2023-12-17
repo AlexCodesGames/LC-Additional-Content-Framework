@@ -46,7 +46,7 @@ namespace AdditionalSuits
         //mod details
         private const string modGUID = "ACS.AdditionalSuits";
         private const string modName = "AdditionalSuits";
-        private const string modVersion = "1.1.0";
+        private const string modVersion = "1.1.1";
 
         //harmony reference
         private readonly Harmony harmony = new Harmony(modGUID);
