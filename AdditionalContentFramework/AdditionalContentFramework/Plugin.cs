@@ -69,7 +69,7 @@ namespace AdditionalContentFramework
         public string ModGUID { get { return modGUID; } }
         private const string modName = "AdditionalContentFramework";
         public string ModName { get { return modName; } }
-        private const string modVersion = "1.0.0";
+        private const string modVersion = "1.0.2";
         public string ModVersion { get { return modVersion; } }
 
         //harmony reference
@@ -251,16 +251,25 @@ namespace AdditionalContentFramework
 
                     //load all valid additional content modules
                     AddLog("loading content modules...");
-                    //  grab listing of subdirectories in plugin folder and iterate through each one
-                    string[] subdirectories = Directory.GetDirectories(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+                    //  grab listing of subdirectories in plugins folder and iterate through each one
+                    //  NOTE: we need to do a double-depth check b.c of Thunderstore's mod profile system
+                    string parseFolder = Path.GetDirectoryName(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+                    string[] subdirectories = Directory.GetDirectories(parseFolder);
                     foreach (string subdirectory in subdirectories)
                     {
-                        //only target content module resource folders
-                        DirectoryInfo directoryInfo = new DirectoryInfo(subdirectory);
-                        if (directoryInfo.Name.StartsWith("res") == false) continue;
+                        //parse any sub directories (thunderstore mod profile specific processing)
+                        string[] subdirectories2 = Directory.GetDirectories(subdirectory);
+                        foreach (string subdirectory2 in subdirectories2)
+                        {
+                            //if target folder is an additional content resource folder
+                            DirectoryInfo directoryInfo2 = new DirectoryInfo(subdirectory2);
+                            if (directoryInfo2.Name.StartsWith("res") == true) LoadContentModule(subdirectory2);
+                        }
 
-                        //attempt to load content module
-                        LoadContentModule(subdirectory);
+                        //if target folder is an additional content resource folder
+                        DirectoryInfo directoryInfo = new DirectoryInfo(subdirectory);
+                        if (directoryInfo.Name.StartsWith("res") == true) LoadContentModule(subdirectory);
+                        
                     }
                     AddLog("loaded content modules! (count=" + ContentModules.Count + ")");
 
