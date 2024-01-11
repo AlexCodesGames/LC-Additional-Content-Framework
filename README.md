@@ -1,8 +1,6 @@
 # Additional Content Framework
 ## About
 This mod acts as loader for other mods, empowering modders to easily add their own custom items to Lethal Company by only adding resource files (defs, textures, etc.)!
-
-![Lethal_Company_sZ6nxSqOOj](https://github.com/AlexCodesGames/LC-Additional-Suits/assets/9707185/10aa7d2c-db8f-4e15-a80f-a626dcdc9ea0)
  
 Please Note: For this mod to work, ALL players in your lobby need to have this mod (along with any content modules being used) downloaded!
 
