@@ -4,6 +4,7 @@
   "website_url": "",
   "description": "Add your desc here!",
   "dependencies": [
-    "BepInEx-BepInExPack-5.4.2100"
+    "BepInEx-BepInExPack-5.4.2100",
+    "AlexCodesGames-AdditionalContentFramework-1.0.0"
   ]
 }
